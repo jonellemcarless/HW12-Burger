@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<meta charset="UTF-8">
+	<title>Burgers</title>
+</head>
+<body>
+	
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<h1>Eat-Da-Burger</h1>
+				<img src="./BURGER-LARGE.jpg" alt="Burger Logo">
+			</div>
+		</div>
+		<div class="row">
+
+			<div id="burgers" class="col-md-4">
+				
+			</div>
+
+			<div class="col-md-4">
+				<div class="form-group">
+				  <label for="comment">Add a burger:</label>
+				  <textarea class="form-control" rows="5" id="comment"></textarea>
+				  <button id="submit" type="submit" class="btn btn-default">Submit</button>
+				</div>
+
+			<div id="devouredBurgers" class="col-md-4">
+				
+			</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+	<!-- jquery -->
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$('#submit').on('click', function(){
+		var burgerName = $('#comment').val().trim();
+
+		$('#burgers').append("<class='eat'button>" + burgerName + "</button><br><br>");
+
+		var currentURL = window.location.origin;
+
+			$.post( currentURL + "/index", burgerName)
+				.done(function(data){
+					console.log(data);
+					alert("Adding character...")
+				})
+
+		$('#comment').val('');
+
+		});
+
+		$('.eat').on('click', function(){
+
+		});
+
+	</script>
+</html>
