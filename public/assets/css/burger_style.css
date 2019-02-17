@@ -1,11 +1,11 @@
 body {
-    background-color: #ff9900;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    background-color: #ffbf5f;
+    
 }
 
 img {
     height: 200px;
-    width: 200px;
+    width: 300px;
 }
 
 textarea {

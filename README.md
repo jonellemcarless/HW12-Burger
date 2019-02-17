@@ -1,4 +1,5 @@
 # BURGER APP
+Please note the app starts at /index not /
 
 # Node Express Handlebars
 
