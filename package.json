@@ -1,5 +1,5 @@
 {
-  "name": "HW12-NodeExpressHandlebars",
+  "name": "hw12-nodeexpresshandlebars",
   "version": "1.0.0",
   "description": "Please note the app starts at /index not /",
   "main": "server.js",
@@ -13,7 +13,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^3.0.2",
     "mysql": "^2.16.0"
   },
   "devDependencies": {},
